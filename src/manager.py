@@ -1,13 +1,13 @@
-# ÀàÃû£ºmain
-# ¹¦ÄÜ£ºÖ÷½çÃæ
-# Ê±¼ä£º2018Äê12ÔÂ
-# ×÷Õß£ºÍõÊçÀö
+# ç±»åï¼šmain
+# åŠŸèƒ½ï¼šä¸»ç•Œé¢
+# æ—¶é—´ï¼š2018å¹´12æœˆ
+# ä½œè€…ï¼šç‹æ·‘ä¸½
 
 import os
 import Calculate
 import UI
 
-# ×¢²áUI×é½¨ Éú³É¾ØÕóĞÅÏ¢
+# æ³¨å†ŒUIç»„å»º ç”ŸæˆçŸ©é˜µä¿¡æ¯
 ui = UI.UI()
 calu = Calculate.Calculate()
 calu.set_a_random(ui.game_matrix)
@@ -16,7 +16,7 @@ GameOver = False
 while not GameOver:
     os.system('clear')
     ui.printUI()
-    temp = input('\nÇëÊäÈëÄãµÄ²Ù×÷£¨ÉÏ£ºw ÏÂ£ºs ×ó£ºa ÓÒ£ºd £©\n')
+    temp = input('\nè¯·è¾“å…¥ä½ çš„æ“ä½œï¼ˆä¸Šï¼šw ä¸‹ï¼šs å·¦ï¼ša å³ï¼šd ï¼‰\n')
     print(temp)
     # print(ui.game_matrix)
     if temp == 'w':
@@ -31,7 +31,7 @@ while not GameOver:
     elif temp == 'q':
         break
     else:
-        print('ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë£¡')
+        print('è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼')
     ui.set_score(score)
 
     gameover = calu.set_a_random(ui.game_matrix)
