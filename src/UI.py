@@ -1,7 +1,7 @@
-# ÀàÃû£ºUI
-# ¹¦ÄÜ£ºÉú³É½çÃæµÄĞÅÏ¢¡¢Õ¹Ê¾½çÃæ
-# Ê±¼ä£º2018Äê12ÔÂ
-# ×÷Õß£ºÍõÊçÀö
+# ç±»åï¼šUI
+# åŠŸèƒ½ï¼šç”Ÿæˆç•Œé¢çš„ä¿¡æ¯ã€å±•ç¤ºç•Œé¢
+# æ—¶é—´ï¼š2018å¹´12æœˆ
+# ä½œè€…ï¼šç‹æ·‘ä¸½
 
 class UI:
 
@@ -11,7 +11,7 @@ class UI:
         self.score = 0
         self.stime = time.time()
 
-    # ÊäÈëUI¾ØÕó£¬´òÓ¡UI
+    # è¾“å…¥UIçŸ©é˜µï¼Œæ‰“å°UI
     def printUI(self):
         print('------------------------------------')
         print('|' + ('score: ' + str(self.score)).center(16) + '|' + ('time :' + str(self.get_time())).center(16) + '|')
@@ -43,7 +43,7 @@ class UI:
         time = int(time.time() - self.stime)
         s_time = time % 60
         min_time = (time - s_time) * 60
-        time = str(min_time).center(2) + '·Ö ' + str(s_time).center(2) + 'Ãë'
+        time = str(min_time).center(2) + 'åˆ† ' + str(s_time).center(2) + 'ç§’'
         return time
 
 
