@@ -1,7 +1,7 @@
-# ÀàÃû£ºCalculate
-# ¹¦ÄÜ£º¼ÆËãÓÎÏ·
-# Ê±¼ä£º2018Äê12ÔÂ
-# ×÷Õß£ºÍõÊçÀö
+# ç±»åï¼šCalculate
+# åŠŸèƒ½ï¼šè®¡ç®—æ¸¸æˆ
+# æ—¶é—´ï¼š2018å¹´12æœˆ
+# ä½œè€…ï¼šç‹æ·‘ä¸½
 class Calculate:
     def __init__(self):
         pass
@@ -25,79 +25,79 @@ class Calculate:
         return matrix
 
     def up(self, matrix):
-        # Ñ­»·¼ÆËã
-        # Ïà¼Ó
-        # Êú×ÅµÄ
+        # å¾ªç¯è®¡ç®—
+        # ç›¸åŠ 
+        # ç«–ç€çš„
         temp_score = 0
         for i in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for j in range(4):
-                # Èç¹ûÓĞÊıµÄÕâ¸öÎ»ÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                # å¦‚æœæœ‰æ•°çš„è¿™ä¸ªä½ç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                 if j == 0:
                     pass
                 else:
-                    # Èç¹ûÁ½¸öÊıÏàµÈ£¬ÔòÏà¼Ó
+                    # å¦‚æœä¸¤ä¸ªæ•°ç›¸ç­‰ï¼Œåˆ™ç›¸åŠ 
                     if matrix[j][i] == matrix[j - 1][i] and matrix[j][i] is not 0:
                         matrix[j - 1][i] += matrix[j][i]
                         matrix[j][i] = 0
-                        # ¼ÆËã·ÖÊı
+                        # è®¡ç®—åˆ†æ•°
                         temp_score += matrix[j - 1][i]
 
         for i in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for t in range(4):
                 for j in range(4):
-                    # Ïà¼Ó
-                    # Èç¹ûJÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                    # ç›¸åŠ 
+                    # å¦‚æœJç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                     if j == 0:
                         pass
                     else:
-                        # ÏòÉÏÒÆ¶¯
+                        # å‘ä¸Šç§»åŠ¨
                         if matrix[j - 1][i] == 0 and matrix[j][i] != 0:
                             matrix[j - 1][i] = matrix[j][i]
                             matrix[j][i] = 0
-                            # ÏòÉÏÒÆ¶¯Ö®ºó»¹ĞèÒªÅĞ¶ÏÊÇ²»ÊÇ¼ÌĞøÏà¼Ó
+                            # å‘ä¸Šç§»åŠ¨ä¹‹åè¿˜éœ€è¦åˆ¤æ–­æ˜¯ä¸æ˜¯ç»§ç»­ç›¸åŠ 
 
                             if matrix[j - 1][i] == matrix[j - 1 - 1][i] and matrix[j - 1][i] is not 0:
                                 matrix[j - 1 - 1][i] += matrix[j - 1][i]
                                 matrix[j - 1][i] = 0
-                                # ¼ÆËã·ÖÊı
+                                # è®¡ç®—åˆ†æ•°
                                 temp_score += matrix[j - 1 - 1][i]
 
         return temp_score
 
     def down(self, matrix):
-        # Ñ­»·¼ÆËã
-        # Ïà¼Ó
-        # Êú×ÅµÄ
+        # å¾ªç¯è®¡ç®—
+        # ç›¸åŠ 
+        # ç«–ç€çš„
         temp_score = 0
         for i in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for j in range(4):
-                # Èç¹ûÓĞÊıµÄÕâ¸öÎ»ÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                # å¦‚æœæœ‰æ•°çš„è¿™ä¸ªä½ç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                 if j == 3:
                     pass
                 else:
-                    # Èç¹ûÁ½¸öÊıÏàµÈ£¬ÔòÏà¼Ó
+                    # å¦‚æœä¸¤ä¸ªæ•°ç›¸ç­‰ï¼Œåˆ™ç›¸åŠ 
                     if matrix[3 - j][i] == matrix[3 - j - 1][i] and matrix[3 - j][i] != 0:
                         matrix[3 - j][i] += matrix[3 - j - 1][i]
                         matrix[3 - j - 1][i] = 0
                         temp_score += matrix[3 - j][i]
 
         for i in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for t in range(4):
                 for j in range(4):
-                    # Ïà¼Ó
-                    # Èç¹ûJÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                    # ç›¸åŠ 
+                    # å¦‚æœJç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                     if j == 3:
                         pass
                     else:
-                        # ÏòÏÂÒÆ¶¯
+                        # å‘ä¸‹ç§»åŠ¨
                         if matrix[j + 1][i] == 0 and matrix[j][i] != 0:
                             matrix[j + 1][i] = matrix[j][i]
                             matrix[j][i] = 0
-                            # +1 ÊÇÒòÎªÔªËØ½»»»ÁËÎ»ÖÃ
+                            # +1 æ˜¯å› ä¸ºå…ƒç´ äº¤æ¢äº†ä½ç½®
                             if matrix[3 - j + 1][i] == matrix[3 - j - 1 + 1][i] and matrix[3 - j + 1][i] != 0:
                                 matrix[3 - j + 1][i] += matrix[3 - j - 1 + 1][i]
                                 matrix[3 - j - 1 + 1][i] = 0
@@ -105,33 +105,33 @@ class Calculate:
         return temp_score
 
     def left(self, matrix):
-        # Ñ­»·¼ÆËã
-        # Ïà¼Ó
-        # ºá×ÅµÄ
+        # å¾ªç¯è®¡ç®—
+        # ç›¸åŠ 
+        # æ¨ªç€çš„
         temp_score = 0
         for j in range(4):
-            # Êú×ÅµÄ
+            # ç«–ç€çš„
             for i in range(4):
-                # Èç¹ûÓĞÊıµÄÕâ¸öÎ»ÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                # å¦‚æœæœ‰æ•°çš„è¿™ä¸ªä½ç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                 if i == 0:
                     pass
                 else:
-                    # Èç¹ûÁ½¸öÊıÏàµÈ£¬ÔòÏà¼Ó
+                    # å¦‚æœä¸¤ä¸ªæ•°ç›¸ç­‰ï¼Œåˆ™ç›¸åŠ 
                     if matrix[j][i] == matrix[j][i - 1] and matrix[j][i] != 0:
                         matrix[j][i - 1] += matrix[j][i]
                         matrix[j][i] = 0
                         temp_score += matrix[j][i - 1]
 
         for j in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for t in range(4):
                 for i in range(4):
-                    # Ïà¼Ó
-                    # Èç¹ûIÖÃÔÚ×îÉÏÃæÒ»ÁĞ
+                    # ç›¸åŠ 
+                    # å¦‚æœIç½®åœ¨æœ€ä¸Šé¢ä¸€åˆ—
                     if i == 0:
                         pass
                     else:
-                        # Ïò×óÒÆ¶¯
+                        # å‘å·¦ç§»åŠ¨
                         if matrix[j][i - 1] == 0 and matrix[j][i] != 0:
                             matrix[j][i - 1] = matrix[j][i]
                             matrix[j][i] = 0
@@ -143,33 +143,33 @@ class Calculate:
         return temp_score
 
     def right(self, matrix):
-        # Ñ­»·¼ÆËã
-        # Ïà¼Ó
-        # ºá×ÅµÄ
+        # å¾ªç¯è®¡ç®—
+        # ç›¸åŠ 
+        # æ¨ªç€çš„
         temp_score = 0
         for j in range(4):
-            # Êú×ÅµÄ
+            # ç«–ç€çš„
             for i in range(4):
-                # Èç¹ûÓĞÊıµÄÕâ¸öÎ»ÖÃÔÚ×îÉÏÃæÒ»ĞĞ
+                # å¦‚æœæœ‰æ•°çš„è¿™ä¸ªä½ç½®åœ¨æœ€ä¸Šé¢ä¸€è¡Œ
                 if i == 3:
                     pass
                 else:
-                    # Èç¹ûÁ½¸öÊıÏàµÈ£¬ÔòÏà¼Ó
+                    # å¦‚æœä¸¤ä¸ªæ•°ç›¸ç­‰ï¼Œåˆ™ç›¸åŠ 
                     if matrix[j][3 - i] == matrix[j][3 - i - 1] and matrix[j][3 - i] != 0:
                         matrix[j][3 - i - 1] += matrix[j][3 - i]
                         matrix[j][3 - i] = 0
                         temp_score += matrix[j][3 - i - 1]
 
         for j in range(4):
-            # ºá×ÅµÄ
+            # æ¨ªç€çš„
             for t in range(4):
                 for i in range(4):
-                    # Ïà¼Ó
-                    # Èç¹ûIÖÃÔÚ×îÉÏÃæÒ»ÁĞ
+                    # ç›¸åŠ 
+                    # å¦‚æœIç½®åœ¨æœ€ä¸Šé¢ä¸€åˆ—
                     if i == 3:
                         pass
                     else:
-                        # ÏòÉÏÒÆ¶¯
+                        # å‘ä¸Šç§»åŠ¨
                         if matrix[j][i + 1] == 0 and matrix[j][i] != 0:
                             matrix[j][i + 1] = matrix[j][i]
                             matrix[j][i] = 0
